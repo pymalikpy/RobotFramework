@@ -1,0 +1,9 @@
+==============================================================================
+Test7 :: To add a product to the cart                                         
+==============================================================================
+Select the form and navigate to Child window                          | PASS |
+------------------------------------------------------------------------------
+Test7 :: To add a product to the cart                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\91966\PycharmProjects\Robot_Framework\tests\pabot_results\1\output.xml

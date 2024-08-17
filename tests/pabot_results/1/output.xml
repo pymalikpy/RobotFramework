@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.9.0 on win32)" generated="2024-08-14T19:00:24.428742" rpa="false" schemaversion="5">
+<suite id="s1" name="Test7" source="C:\Users\91966\PycharmProjects\Robot_Framework\tests\test7.robot">
+<test id="s1-t1" name="Select the form and navigate to Child window" line="33">
+<kw name="Open the browser with url" owner="Generic" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:24.765991" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-14T19:00:24.765991" elapsed="2.780892"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-14T19:00:27.546883" elapsed="0.037519"/>
+</kw>
+<status status="PASS" start="2024-08-14T19:00:24.764904" elapsed="2.819498"/>
+</kw>
+<kw name="Fill the login details and select the user option" owner="LandingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:27.586416" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>rahulshettyacademy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T19:00:27.585415" elapsed="0.124910"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:27.711332" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-08-14T19:00:27.754324" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>learning</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T19:00:27.710325" elapsed="0.098883"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:27.813196" level="INFO">Clicking element 'css:input[value=user]'.</msg>
+<arg>css:input[value=user]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T19:00:27.810198" elapsed="0.078213"/>
+</kw>
+<kw name="Wait Until Element Is Located" owner="LandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${modal}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-14T19:00:27.889443" elapsed="0.249503"/>
+</kw>
+<status status="PASS" start="2024-08-14T19:00:27.889443" elapsed="0.249503"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:28.140051" level="INFO">Clicking button 'okayBtn'.</msg>
+<arg>okayBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T19:00:28.138946" elapsed="0.083520"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${modal}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-08-14T19:00:28.223553" elapsed="0.301839"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:28.527820" level="INFO">Selecting options from selection list 'css:select.form-control' by value teach.</msg>
+<arg>css:select.form-control</arg>
+<arg>teach</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-08-14T19:00:28.526499" elapsed="0.231048"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:28.758597" level="INFO">Selecting checkbox 'terms'.</msg>
+<arg>terms</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T19:00:28.757547" elapsed="0.122844"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:28.881392" level="INFO">Verifying checkbox 'terms' is selected.</msg>
+<arg>terms</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-08-14T19:00:28.881392" elapsed="0.055853"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-14T19:00:28.937245" level="INFO">Clicking element 'css:.blinkingText'.</msg>
+<arg>css:.blinkingText</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T19:00:28.937245" elapsed="0.140195"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>New</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-08-14T19:00:29.077440" elapsed="0.025222"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://h1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-14T19:00:29.104122" elapsed="1.909160"/>
+</kw>
+<status status="PASS" start="2024-08-14T19:00:27.584402" elapsed="3.428880"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-14T19:00:36.023083" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-14T19:00:31.014371" elapsed="5.009709"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-14T19:00:36.025070" elapsed="2.180907"/>
+</kw>
+<status status="PASS" start="2024-08-14T19:00:31.013282" elapsed="7.193687"/>
+</kw>
+<status status="PASS" start="2024-08-14T19:00:24.764904" elapsed="13.442065"/>
+</test>
+<doc>To add a product to the cart</doc>
+<status status="PASS" start="2024-08-14T19:00:24.437748" elapsed="13.770215"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test7">Test7</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

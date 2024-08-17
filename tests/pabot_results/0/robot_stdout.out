@@ -1,0 +1,28 @@
+==============================================================================
+Test7 :: To add a product to the cart                                         
+==============================================================================
+Add product to the cart                                                 
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91966\PycharmProjects\Robot_Framework\tests\test7.robot:22
+    T:  Add product to the cart    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91966\PycharmProjects\Robot_Framework\tests\test7.robot:29
+      Enter the country    ${countryName}
+      |  ${countryName} = India (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91966\PycharmProjects\Robot_Framework\PageObjects\ConfirmationPage.robot:18
+      Wait Until Element Is Located on the page    //a[text()='${country_name}']
+      |  //a[text()='${country_name}'] = //a[text()='India'] (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91966\PycharmProjects\Robot_Framework\PageObjects\Generic.robot:31
+      Wait Until Element Is Visible    ${page_locator}    5s
+      |  ${page_locator} = //a[text()='India'] (str)
+______________________________________________________________________________
+| FAIL |
+Element '//a[text()='India']' not visible after 5 seconds.
+------------------------------------------------------------------------------
+Test7 :: To add a product to the cart                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\91966\PycharmProjects\Robot_Framework\tests\pabot_results\0\output.xml

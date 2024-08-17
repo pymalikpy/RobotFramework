@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.9.0 on win32)" generated="2024-08-15T19:24:54.544898" rpa="false" schemaversion="5">
+<suite id="s1" name="Test8" source="C:\Users\91966\PycharmProjects\Robot_Framework\tests\test8.robot">
+<test id="s1-t1" name="Play around with dictionary" line="10">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-08-15T19:24:54.703821" level="INFO">&amp;{data} = { name=pinchudada | course=robot | website=pinchudada.com }</msg>
+<var>&amp;{data}</var>
+<arg>name=pinchudada</arg>
+<arg>course=robot</arg>
+<arg>website=pinchudada.com</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-08-15T19:24:54.703821" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-15T19:24:54.703821" level="INFO">{'name': 'pinchudada', 'course': 'robot', 'website': 'pinchudada.com'}</msg>
+<arg>${data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-15T19:24:54.703821" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${data}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2024-08-15T19:24:54.703821" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-15T19:24:54.703821" level="INFO">pinchudada</msg>
+<arg>${data}[name]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-15T19:24:54.703821" elapsed="0.000000"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<arg>${data}</arg>
+<arg>website</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-08-15T19:24:54.703821" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-08-15T19:24:54.703821" elapsed="0.000000"/>
+</test>
+<test id="s1-t2" name="Add book into library database" line="18">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-08-15T19:24:54.703821" level="INFO">${req_body} = {'name': 'Crime&amp;Punishment', 'isbn': 'acd', 'aisle': '229', 'author': 'Fyodor'}</msg>
+<var>${req_body}</var>
+<arg>name=Crime&amp;Punishment</arg>
+<arg>isbn=acd</arg>
+<arg>aisle=229</arg>
+<arg>author=Fyodor</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-08-15T19:24:54.703821" elapsed="0.000000"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2024-08-15T19:24:55.999504" level="INFO">POST Request : url=https://rahushettyacademy.com/Library/Addbook.php (redirected) 
+ path_url=/Library/Addbook.php 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '79', 'Content-Type': 'application/json'} 
+ body=b'{"name": "Crime&amp;Punishment", "isbn": "acd", "aisle": "229", "author": "Fyodor"}' 
+ </msg>
+<msg time="2024-08-15T19:24:55.999504" level="INFO">GET Response : url=http://survey-smiles.com 
+ status=200, reason=OK 
+ headers={'date': 'Thu, 15 Aug 2024 13:54:55 GMT', 'content-type': 'text/html; charset=utf-8', 'content-length': '1050', 'x-request-id': 'd531e00f-30b9-4eb9-88aa-cb378d7d063c', 'cache-control': 'no-store, max-age=0', 'accept-ch': 'sec-ch-prefers-color-scheme', 'critical-ch': 'sec-ch-prefers-color-scheme', 'vary': 'sec-ch-prefers-color-scheme', 'x-adblock-key': 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_KU/mkwG5gBrxOjSLOdhY6Ag5tyS4eYLlZ2HuGvpjvyAdoTfVjPe2oznQwlkDS6lFIKIiZevQ+QFyPP8R7mvcyg==', 'set-cookie': 'parking_session=d531e00f-30b9-4eb9-88aa-cb378d7d063c; expires=Thu, 15 Aug 2024 14:09:55 GMT; path=/'} 
+ body=&lt;!doctype html&gt;
+&lt;html data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_KU/mkwG5gBrxOjSLOdhY6Ag5tyS4eYLlZ2HuGvpjvyAdoTfVjPe2oznQwlkDS6lFIKIiZevQ+QFyPP8R7mvcyg==" lang="en" style="background: #2B2B2B;"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC"&gt;
+    &lt;link rel="preconnect" href="https://www.google.com" crossorigin&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="target" style="opacity: 0"&gt;&lt;/div&gt;
+&lt;script&gt;window.park = "eyJ1dWlkIjoiZDUzMWUwMGYtMzBiOS00ZWI5LTg4YWEtY2IzNzhkN2QwNjNjIiwicGFnZV90aW1lIjoxNzIzNzMwMDk1LCJwYWdlX3VybCI6Imh0dHA6Ly9zdXJ2ZXktc21pbGVzLmNvbS8iLCJwYWdlX21ldGhvZCI6IkdFVCIsInBhZ2VfcmVxdWVzdCI6e30sInBhZ2VfaGVhZGVycyI6e30sImhvc3QiOiJzdXJ2ZXktc21pbGVzLmNvbSIsImlwIjoiNDkuNDMuMTc2LjkwIn0K";&lt;/script&gt;
+&lt;script src="/bqKAMywBH.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+ </msg>
+<msg time="2024-08-15T19:24:55.999504" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}/Library/Addbook.php</arg>
+<arg>json=${req_body}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2024-08-15T19:24:54.703821" elapsed="1.295683"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-15T19:24:55.999504" level="INFO">Status Code: 200</msg>
+<arg>Status Code: ${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-15T19:24:55.999504" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-15T19:24:55.999504" level="INFO">Response Content: &lt;!doctype html&gt;
+&lt;html data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_KU/mkwG5gBrxOjSLOdhY6Ag5tyS4eYLlZ2HuGvpjvyAdoTfVjPe2oznQwlkDS6lFIKIiZevQ+QFyPP8R7mvcyg==" lang="en" style="background: #2B2B2B;"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC"&gt;
+    &lt;link rel="preconnect" href="https://www.google.com" crossorigin&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="target" style="opacity: 0"&gt;&lt;/div&gt;
+&lt;script&gt;window.park = "eyJ1dWlkIjoiZDUzMWUwMGYtMzBiOS00ZWI5LTg4YWEtY2IzNzhkN2QwNjNjIiwicGFnZV90aW1lIjoxNzIzNzMwMDk1LCJwYWdlX3VybCI6Imh0dHA6Ly9zdXJ2ZXktc21pbGVzLmNvbS8iLCJwYWdlX21ldGhvZCI6IkdFVCIsInBhZ2VfcmVxdWVzdCI6e30sInBhZ2VfaGVhZGVycyI6e30sImhvc3QiOiJzdXJ2ZXktc21pbGVzLmNvbSIsImlwIjoiNDkuNDMuMTc2LjkwIn0K";&lt;/script&gt;
+&lt;script src="/bqKAMywBH.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</msg>
+<arg>Response Content: ${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-15T19:24:55.999504" elapsed="0.000000"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-08-15T19:24:56.014542" level="INFO">${content_type} = text/html; charset=utf-8</msg>
+<var>${content_type}</var>
+<arg>${response.headers}</arg>
+<arg>content-type</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-08-15T19:24:55.999504" elapsed="0.015038"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${content_type}' == 'application/json'</arg>
+<arg>Log</arg>
+<arg>${response.json()}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-15T19:24:56.014542" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-15T19:24:56.014542" level="INFO">Non-JSON response received: &lt;!doctype html&gt;
+&lt;html data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_KU/mkwG5gBrxOjSLOdhY6Ag5tyS4eYLlZ2HuGvpjvyAdoTfVjPe2oznQwlkDS6lFIKIiZevQ+QFyPP8R7mvcyg==" lang="en" style="background: #2B2B2B;"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC"&gt;
+    &lt;link rel="preconnect" href="https://www.google.com" crossorigin&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="target" style="opacity: 0"&gt;&lt;/div&gt;
+&lt;script&gt;window.park = "eyJ1dWlkIjoiZDUzMWUwMGYtMzBiOS00ZWI5LTg4YWEtY2IzNzhkN2QwNjNjIiwicGFnZV90aW1lIjoxNzIzNzMwMDk1LCJwYWdlX3VybCI6Imh0dHA6Ly9zdXJ2ZXktc21pbGVzLmNvbS8iLCJwYWdlX21ldGhvZCI6IkdFVCIsInBhZ2VfcmVxdWVzdCI6e30sInBhZ2VfaGVhZGVycyI6e30sImhvc3QiOiJzdXJ2ZXktc21pbGVzLmNvbSIsImlwIjoiNDkuNDMuMTc2LjkwIn0K";&lt;/script&gt;
+&lt;script src="/bqKAMywBH.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</msg>
+<arg>Non-JSON response received: ${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-15T19:24:56.014542" elapsed="0.000000"/>
+</kw>
+<arg>'${content_type}' != 'application/json'</arg>
+<arg>Log</arg>
+<arg>Non-JSON response received: ${response.content}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-15T19:24:56.014542" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<msg time="2024-08-15T19:24:56.014542" level="FAIL">Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 1 column 1 (char 0)</msg>
+<arg>${response.json()}</arg>
+<arg>ID</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="FAIL" start="2024-08-15T19:24:56.014542" elapsed="0.000000">Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 1 column 1 (char 0)</status>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${book_id}</var>
+<arg>${response.json()}</arg>
+<arg>ID</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2024-08-15T19:24:56.014542" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${book_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-08-15T19:24:56.014542" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>successfully added</arg>
+<arg>${response.json()}[Msg]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-08-15T19:24:56.014542" elapsed="0.000000"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2024-08-15T19:24:56.014542" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-08-15T19:24:54.703821" elapsed="1.310721">Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 1 column 1 (char 0)</status>
+</test>
+<status status="FAIL" start="2024-08-15T19:24:54.547104" elapsed="1.467438"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Test8">Test8</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

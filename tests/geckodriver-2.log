@@ -1,0 +1,20 @@
+1722171335739	geckodriver	INFO	Listening on 127.0.0.1:64787
+1722171338857	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64788" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileLv4rlo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1722171349260	Marionette	INFO	Marionette enabled
+1722171349432	Marionette	INFO	Listening on port 64825
+WebDriver BiDi listening on ws://127.0.0.1:64788
+Read port: 64825
+1722171349722	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64788/devtools/browser/5bb1c4e1-a0a5-4b61-875d-5c5621dc0b91
+JavaScript error: https://yak.www.test.kitomba.com/js/bundle/node_modules.react-dom.cjs.a0450edded7e2ba9ef4e.js, line 325: Error: Minified React error #299; visit https://reactjs.org/docs/error-decoder.html?invariant=299 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-DQB9TLBMWN&l=dataLayer&cx=c, line 549: Script terminated by timeout at:
+h.zh@https://www.googletagmanager.com/gtag/js?id=G-DQB9TLBMWN&l=dataLayer&cx=c:549:30
+get@https://www.googletagmanager.com/gtag/js?id=G-DQB9TLBMWN&l=dataLayer&cx=c:547:119
+stop@https://www.googletagmanager.com/gtag/js?id=G-DQB9TLBMWN&l=dataLayer&cx=c:547:87
+h.Rk/c/<@https://www.googletagmanager.com/gtag/js?id=G-DQB9TLBMWN&l=dataLayer&cx=c:547:410
+
+1722171375099	Marionette	INFO	Stopped listening on port 64825
+Dynamically enable window occlusion 1
